@@ -1,0 +1,38 @@
+version: '2'
+services:
+ jenkins:
+  build: /home/ubuntu/dockerer/jenkins/
+  ports:
+   - "8081:8080"
+  tty: true
+
+ jira:
+  build: /home/ubuntu/dockerer/JIRA/
+  ports:
+   - "8082:8080"
+  tty: true
+
+ nexus:
+  build: /home/ubuntu/dockerer/nexus/
+  ports:
+   - "8083:8081"
+  tty: true
+
+ zabbix:
+  build: /home/ubuntu/dockerer/zabbix/
+  ports:
+   - "80:80"
+  tty: true
+
+ tomcat:
+  build: /home/ubuntu/dockerer/tomcat/
+  ports:
+   - "8085:8080"
+  tty: true
+
+ urbancode:
+  build: /home/ubuntu/dockerer/urbancode/
+  ports:
+   - "8086:8080"
+   - "8443:8443"
+  tty: true
